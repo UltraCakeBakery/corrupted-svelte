@@ -1,4 +1,5 @@
 <script>
+    import { browser } from '$app/environment';
     import { onMount, onDestroy } from 'svelte';
 
     /**
@@ -43,8 +44,10 @@
 
     function animateRandomText() {
         text = getRandomText();
-        requestedAnimationFrameId = null;
+        
+        if(!browser) return
 
+        requestedAnimationFrameId = null;
         setTimeoutId = setTimeout(() => {
             requestedAnimationFrameId = window.requestAnimationFrame(animateRandomText);
         }, speed);
@@ -53,6 +56,7 @@
     onMount(() => animateRandomText());
 
     onDestroy(() => {
+        if(!browser) return
         window.cancelAnimationFrame(requestedAnimationFrameId);
         clearTimeout(setTimeoutId);
     });
