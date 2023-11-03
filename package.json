@@ -1,7 +1,7 @@
 {
 	"name": "corrupted-text-svelte",
 	"description": "A super lightweight and fast corrupted text component for Svelte, with configurable speed and characters. Monospace by default.",
-	"version": "1.0.5",
+	"version": "1.1.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
