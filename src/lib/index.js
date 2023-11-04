@@ -1,2 +1,9 @@
 import CorruptedText from "./CorruptedText.svelte";
-export default CorruptedText
+import StaticNoise from "./StaticNoise.svelte";
+import Flicker from "./Flicker.svelte";
+
+export default { 
+    CorruptedText, 
+    Flicker, 
+    StaticNoise
+}

@@ -63,4 +63,4 @@
     });
 </script>
 
-<span style="font-family: monospace;">{text}</span>
+<span style="font-family: monospace;" class={$$props.class}>{text}</span>
