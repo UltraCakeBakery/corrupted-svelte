@@ -1,7 +1,7 @@
 {
 	"name": "corrupted-svelte",
 	"description": "A super lightweight and performant component library for svelte for building corrupted looking websites.",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
