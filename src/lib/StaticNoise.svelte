@@ -14,7 +14,8 @@
      */
     export let frames = 32;
     $: framesAsNumber = Number(frames)
-    $: preparedFrames = new Array(framesAsNumber).fill(null).map(_ => generateFrame(canvasContext2D))
+    let preparedFrames = new Array(framesAsNumber).fill(null)
+    $: if(frames) preparedFrames = new Array(framesAsNumber).fill(null).map(_ => generateFrame(canvasContext2D))
     
     /**
      * The speed (in milliseconds) at which the text updates. Set to 0 for no framerate limit 
@@ -73,6 +74,7 @@
     }
 
     onMount(() => {
+        preparedFrames = new Array(framesAsNumber).fill(null).map(_ => generateFrame(canvasContext2D))
         resize()
         animateRandomText()
 

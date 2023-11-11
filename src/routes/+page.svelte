@@ -2,7 +2,7 @@
     import CorruptedText from "$lib/CorruptedText.svelte";
     import ColorGlitch from "$lib/ColorGlitch.svelte";
     import StaticNoise from "$lib/StaticNoise.svelte";
-  import Flicker from "$lib/Flicker.svelte";
+    import Flicker from "$lib/Flicker.svelte";
 </script>
 
 <header>
